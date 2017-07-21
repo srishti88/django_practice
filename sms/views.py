@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from forms import SendSms
+from .forms import SendSms
 from send_sms import send_sms
 
 
