@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load staticfiles %}
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Step 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send SMS</title>
+    <link rel="stylesheet" href="{% static "/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "/styles.css" %}">
+    <link rel="stylesheet" href="{% static "/Pretty-Registration-Form.css" %}">
 </head>
+
 <body>
-Your Message <b>"{{ message }}"</b>> has been successfully sent to <b>{{ phone }}</b>
-    <h3><a href="/sms">Click Here </a>to send another message.</h3>
+    <div class="row register-form">
+        <div class="col-lg-8 col-lg-offset-2 col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
+                <h1>Your Message <b>"{{ message }}"</b> has been successfully sent to <b>{{ phone }}</b>
+    <h3><a href="/sms">Click Here </a>to send another message.</h3></h1>
+        </div>
+    </div>
+    <script src="{% static "/jquery.min.js" %}"></script>
+    <script src="{% static "/bootstrap.min.js" %}"></script>
 </body>
+
 </html>
+
+
 
