@@ -1,5 +1,5 @@
 from django import forms
-from models import Sms
+from .models import Sms
 
 class SendSms(forms.ModelForm):
     class Meta:
