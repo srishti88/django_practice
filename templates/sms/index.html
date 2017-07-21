@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send SMS</title>
-    <link rel="stylesheet" href="{% static "/bootstrap.min.css" %}">
-    <link rel="stylesheet" href="{% static "/styles.css" %}">
-    <link rel="stylesheet" href="{% static "/Pretty-Registration-Form.css" %}">
+    <title>Send Free SMS</title>
+    <link rel="stylesheet" href="{% static "/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "/fonts/font-awesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "/css/user.css" %}">
+    <link rel="stylesheet" href="{% static "/css/Google-Style-Login.css" %}">
+    <link rel="stylesheet" href="{% static "/css/Mockup-MacBook-Pro.css" %}">
+    <link rel="stylesheet" href="{% static "/css/Hero-Technology.css" %}">
+    <link rel="stylesheet" href="{% static "/css/Material-Card.css" %}">
 </head>
 
 <body>
-    <div class="row register-form">
-        <div class="col-lg-8 col-lg-offset-2 col-md-7 col-md-offset-5 col-sm-12 col-xs-12">
-            <form class="form-horizontal custom-form" method="post">
-    {% csrf_token %}
-                <h1>Send SMS</h1>
-    <div class="form-group">
-        <div class="col-sm-4 label-column">
-            <label class="control-label">Phone (With Country Code)</label>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>Free Text</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" role="presentation"><a href="#">Home </a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-sm-6 input-column">
-            <input type="text" class="form-control input-lg" placeholder="Phone Number" name="phone" value={{ phone }}>
+    </nav>
+    <div class="jumbotron hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-push-7 phone-preview">
+                    <div class="iphone-mockup">
+                        <div class="screen">
+                            <div class="login-card">
+                                <form class="form-signin">
+                                    <input class="form-control" type="text" required="" value={{ phone }} placeholder="Phone Number" autofocus="" name="phone" >
+                                    <textarea class="form-control" rows="5" value={{ message }} name="message" placeholder="Your Message"></textarea><br>
+                                    <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" value="Submit">Send SMS</button>
+                                </form>
+                            </div>
+                        </div><img src="{% static"/img/iphone.svg" %}" class="device"></div>
+                </div>
+                <div class="col-lg-5 col-lg-offset-0 col-md-6 col-md-pull-3 get-it">
+                    <div class="macbook-mockup">
+                        <div class="screen"></div>
+                    </div>
+                    <h1>Send Free SMS</h1>
+                    <p>Send free sms to any Country.</p>
+                    <p><a class="btn btn-primary btn-lg hidden" role="button" href="#"><i class="fa fa-apple"></i> Available on the App Store</a><a class="btn btn-success btn-lg hidden" role="button" href="#"><i class="fa fa-google"></i> Available on Google Play</a></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-sm-4 label-column">
-            <label class="control-label">Message </label>
+    <section class="testimonials">
+        <h2 class="text-center">You'll Love It!</h2>
+        <blockquote>
+            <p>Sending text messages to your friends, family, colleagues around the world without spending a penny </p>
+            <footer>Vineet Chauhan</footer>
+        </blockquote>
+        <div class="card"></div>
+    </section>
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Fantastic Features</h2>
+                    <p>Send Free SMS across the globe without restrictions.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row icon-features">
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-cloud"></i>
+                            <p>24/7 Active</p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-piggy-bank"></i>
+                            <p>Saves You Money</p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-fire"></i>
+                            <p>Instant Delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 input-column">
-            <textarea class="form-control input-lg text-box" name="message" placeholder="Message" value={{ messgae }} ></textarea>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Designed and Developed with &hearts; by Vineet Chauhan</h5></div>
+                <div class="col-sm-6 social-icons"><a href="https://www.facebook.com/vi33t"><i class="fa fa-facebook"></i></a>
+            </div>
         </div>
-    </div>
-    <div class="form-group"></div>
-    <div class="form-group"></div>
-    <input type="submit" value="submit" name="submit">
-</form>
-        </div>
-    </div>
-    <script src="{% static "/jquery.min.js" %}"></script>
-    <script src="{% static "/bootstrap.min.js" %}"></script>
+    </footer>
+    <script src="{% static "/js/jquery.min.js" %}"></script>
+    <script src="{% static "/bootstrap/js/bootstrap.min.js" %}"></script>
 </body>
 
 </html>
