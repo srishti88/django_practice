@@ -28,7 +28,7 @@ SECRET_KEY = 'q@dm0ho3&7kq97mj52b7!3nuy1fk8g$-1k3%qbi(h1m0c_ienk'
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [textatwill.herokuapp.com]
 
 
 # Application definition
@@ -122,8 +122,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]
+# STATICFILES_DIRS = [
+#     STATIC_DIR,
+# ]
