@@ -36,7 +36,7 @@
                             <div class="login-card">
                                 <form class="form-signin" method="POST">
                                     {% csrf_token %}
-                                    <input class="form-control" type="text" required=""  placeholder="PhoneNumber" autofocus="" name="phone" value={{ phone }}>
+                                    <input class="form-control" type="text" value={{ phone }} required=""  placeholder="PhoneNumber" autofocus="" name="phone" >
                                     <textarea class="form-control" rows="5" value={{ message }} name="message" placeholder="Your Message"></textarea><br>
                                     <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" value="Submit">Send SMS</button>
                                 </form>
