@@ -13,6 +13,7 @@ def sms(requests):
         if sms.is_valid():
             phone = sms.cleaned_data['phone']
             message = sms.cleaned_data['message']
+
             if send_sms(phone,message) == True:
                 return render(requests, 'sms/step.html',{'phone':phone,'message':message})
             else:
