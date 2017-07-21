@@ -28,7 +28,7 @@ SECRET_KEY = 'q@dm0ho3&7kq97mj52b7!3nuy1fk8g$-1k3%qbi(h1m0c_ienk'
 DEBUG = True
 
 
-ALLOWED_HOSTS = [textatwill.herokuapp.com]
+ALLOWED_HOSTS = ['textatwill.herokuapp.com',]
 
 
 # Application definition
