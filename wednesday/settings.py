@@ -34,8 +34,6 @@ ALLOWED_HOSTS = ['textatwill.herokuapp.com',]
 # Application definition
 
 INSTALLED_APPS = [
-    'login',
-    'pools',
     'sms',
     'django.contrib.admin',
     'django.contrib.auth',

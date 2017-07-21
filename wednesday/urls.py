@@ -19,8 +19,7 @@ from pools import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login/',include('pools.urls')),
-    url(r'^$',include('pools.urls')),
+    url(r'^$',include('sms.urls')),
     url(r'^sms/',include('sms.urls')),
 
 ]
